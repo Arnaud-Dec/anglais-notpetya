@@ -8,249 +8,363 @@
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Background animation elements -->
   <div id="glitch-overlay"></div>
   <canvas id="matrix-canvas"></canvas>
-  
+
   <div class="presentation-container">
     <div class="progress-bar"><div class="progress-fill" id="progress-bar-fill"></div></div>
-    
-    <!-- Slide 1: Introduction -->
+
+    <!-- SLIDE 1: Introduction -->
     <section class="slide active" id="slide-1">
       <div class="glass-panel text-center flex flex-col justify-center h-full">
         <div class="system-alert">[ WARNING: SYSTEM COMPROMISED ]</div>
         <h1 class="glitch" data-text="NotPetya">NotPetya</h1>
         <h2 class="subtitle">The Most Destructive Cyber-Weapon in History</h2>
-        
-        <div class="mt-8 terminal-window text-left mx-auto">
+        <div class="mt-6 terminal-window text-left mx-auto" style="max-width:680px">
           <div class="terminal-header">
             <span class="btn red"></span><span class="btn yellow"></span><span class="btn green"></span>
-            <span class="title">root@ukraine-node:~</span>
+            <span class="title">root@ukraine-node &mdash; June 27, 2017 &mdash; 03:47:22</span>
           </div>
-          <div class="terminal-body type-writer">
-            <p class="text-green-400">> root init --hook</p>
-            <p>> Question: "In your opinion, what is the most destructive cyberattack in history?"</p>
-            <p class="mt-4">> June 27, 2017: A silent computer in a dark office in Kiev wakes up.</p>
-            <p>> A single, empty file named <strong class="text-white">perfc</strong> appears and is moved to the Windows folder.</p>
-            <div class="red-text mt-4">
-              <p>> ERROR: The next morning, the country wakes up to red screens, locked hospitals, dead ATMs, and paralyzed gas stations.</p>
-            </div>
-            <p class="mt-6 system-success">Presenters: Arnaud & Aiman</p>
+          <div class="terminal-body">
+            <div class="terminal-line" data-delay="0"><span class="term-green">&gt; </span>init_attack --target ukraine --date 2017-06-27</div>
+            <div class="terminal-line" data-delay="800">A silent computer wakes up in a dark Kiev office.</div>
+            <div class="terminal-line" data-delay="1600">Creating: <code class="term-white">C:\Windows\perfc</code></div>
+            <div class="terminal-line" data-delay="2400"><span class="term-crimson">Spreading... 17 infected... 312... 4,872...</span></div>
+            <div class="terminal-line" data-delay="3200"><span class="term-crimson">CRITICAL: Hospitals locked. ATMs dead. Chernobyl blind.</span></div>
+            <div class="terminal-line" data-delay="4000"><span class="term-neon">&gt; Question: In your opinion, what is the most destructive cyberattack in history ?</span></div>
             <span class="cursor"></span>
           </div>
         </div>
+        <p class="mt-4 text-gray-400 font-mono" style="font-size:0.85rem">Presenters: Arnaud &amp; Aiman</p>
       </div>
     </section>
 
-    <!-- Slide 2: Geopolitical Context -->
+    <!-- SLIDE 2: Opening Anecdote -->
     <section class="slide" id="slide-2">
-      <div class="glass-panel">
-        <h2 class="section-title"><span class="number text-neon">II.</span> Geopolitical Context: Ukraine as a Testing Ground</h2>
-        <div class="grid-2-col mt-6">
-          <div class="card card-border-neon">
-            <h3>🛡️ Hybrid Warfare</h3>
-            <p>The attack occurred during the ongoing conflict between Russia and Ukraine that began in 2014.</p>
+      <div class="glass-panel anecdote-panel">
+        <div class="anec-stamp">&#x25FC; 2017-06-27 :: 03:47:22 EET &mdash; Kiev, Ukraine</div>
+
+        <div class="anec-row" id="anec-row-0">
+          <span class="anec-scene-icon">&#x1F311;</span>
+          <span class="anec-scene-text">A <em>silent computer</em> in a dark Kiev office <span class="text-neon">wakes up.</span></span>
+        </div>
+
+        <div class="anec-row" id="anec-row-1">
+          <div class="anec-file-box">
+            <span class="term-green">C:\Windows\</span><span class="text-crimson anec-filename">perfc</span>
+            <span class="anec-file-tag">CREATED &mdash; READ-ONLY &mdash; SILENT</span>
           </div>
-          <div class="card card-border-neon">
-            <h3>⚡ Historical Precedents</h3>
-            <p>Ukraine had already suffered two major attacks on its power grid in 2015 and 2016, leaving hundreds of thousands in the dark.</p>
+        </div>
+
+        <div class="anec-row" id="anec-row-2">
+          <div class="anec-spread">
+            <span class="anec-counter-label">Systems infected:</span>
+            <span class="anec-infection-counter" id="infection-counter">0</span>
+            <div class="anec-dots" id="anec-dots"></div>
           </div>
-          <div class="card card-border-crimson col-span-2 mt-4 flex items-center">
-            <div class="flex-1">
-              <h3>🕵️ The Actor: Sandworm</h3>
-              <p>Identification of an elite unit within the GRU (Russian Military Intelligence).</p>
-              <div class="quote mt-3 text-italic">"Sandworm hackers were known for leaving references to Frank Herbert’s sci-fi novel Dune in their code."</div>
-            </div>
-          </div>
+        </div>
+
+        <div class="anec-divider" id="anec-row-3">&mdash;&nbsp;&nbsp;The Next Morning&nbsp;&nbsp;&mdash;</div>
+
+        <div class="anec-row anec-aftermath" id="anec-row-4">
+          <div class="anec-impact-item">&#x1F3E5; Hospitals &mdash; <span class="text-crimson">screens locked</span></div>
+          <div class="anec-impact-item">&#x1F3E7; ATMs &mdash; <span class="text-crimson">dead</span></div>
+          <div class="anec-impact-item">&#x26FD; Gas Stations &mdash; <span class="text-crimson">paralyzed</span></div>
+          <div class="anec-impact-item">&#x2622;&#xFE0F; Chernobyl &mdash; <span class="text-crimson">monitoring blind</span></div>
         </div>
       </div>
     </section>
 
-    <!-- Slide 3: The Weapon -->
+    <!-- SLIDE 3: Geopolitical Context -->
     <section class="slide" id="slide-3">
       <div class="glass-panel">
-        <h2 class="section-title"><span class="number text-neon">III.</span> The Weapon: Stolen Tools & Supply Chain</h2>
-        <div class="content-box mt-6">
-          <div class="feature-item">
-            <div class="feature-icon text-crimson">🔑</div>
-            <div class="feature-content">
-              <h3>The NSA Connection & Shadow Brokers</h3>
-              <p>The malware used <strong>EternalBlue</strong> and <strong>EternalRomance</strong>, high-end cyber-weapons developed by the U.S. National Security Agency (NSA) that were stolen and leaked online.</p>
+        <h2 class="section-title"><span class="number text-neon">II.</span> Geopolitical Context</h2>
+        <div class="two-col-layout mt-6">
+          <div>
+            <p class="text-gray-400 mb-5" style="font-size:0.85rem;font-style:italic">Ukraine: a digital testing ground for hybrid warfare</p>
+            <div class="geo-timeline-track">
+              <div class="geo-milestone" data-step="0">
+                <div class="milestone-dot dot-blue"></div>
+                <div class="milestone-year">2014</div>
+                <div class="milestone-text">Russia invades<br><strong>Ukraine</strong></div>
+              </div>
+              <div class="timeline-segment seg-blue" data-seg="0"></div>
+              <div class="geo-milestone" data-step="1">
+                <div class="milestone-dot dot-yellow"></div>
+                <div class="milestone-year">2015</div>
+                <div class="milestone-text">1st Power Grid<br><strong>Attack</strong></div>
+              </div>
+              <div class="timeline-segment seg-yellow" data-seg="1"></div>
+              <div class="geo-milestone" data-step="2">
+                <div class="milestone-dot dot-orange"></div>
+                <div class="milestone-year">2016</div>
+                <div class="milestone-text">2nd Power Grid<br><strong>Attack</strong></div>
+              </div>
+              <div class="timeline-segment seg-orange" data-seg="2"></div>
+              <div class="geo-milestone" data-step="3">
+                <div class="milestone-dot dot-crimson pulse-dot"></div>
+                <div class="milestone-year text-crimson">2017</div>
+                <div class="milestone-text text-crimson"><strong>NotPetya</strong><br>June 27th</div>
+              </div>
             </div>
           </div>
-          
-          <div class="feature-item">
-            <div class="feature-icon text-neon">📦</div>
-            <div class="feature-content">
-              <h3>The Infiltration (<span class="keyword">Supply Chain Attack</span>)</h3>
-              <p>Hackers hid the virus inside a mandatory tax software update called <strong>M.E.Doc</strong>. Since every company paying taxes in Ukraine must use it, it provided a "backdoor" into every major institution.</p>
-            </div>
-          </div>
-
-          <div class="feature-item">
-            <div class="feature-icon text-blue">🔌</div>
-            <div class="feature-content">
-              <h3>Propagation Layer</h3>
-              <p>The virus used <strong>Mimikatz</strong>—a tool created by French researcher Benjamin Delpy to show Windows vulnerabilities—to jump laterally from one computer to another automatically.</p>
+          <div class="card card-border-crimson" style="overflow:hidden;padding:0">
+            <img src="gru.jpg" alt="GRU Headquarters, Moscow" class="card-image" onerror="this.style.display='none'">
+            <div style="padding:1.25rem">
+              <h3 class="text-crimson" style="font-size:1.15rem">&#x1F41B; Sandworm &mdash; GRU Unit 74455</h3>
+              <p class="text-gray-300 mt-2" style="font-size:0.88rem">Elite cyber-warfare unit of Russian Military Intelligence</p>
+              <div class="quote mt-3">"They left references to Frank Herbert's <em>Dune</em> in their code."</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Slide 4: Mystery -->
+    <!-- SLIDE 4: The Weapon - Supply Chain Attack -->
     <section class="slide" id="slide-4">
       <div class="glass-panel">
-        <h2 class="section-title"><span class="number text-neon">IV.</span> The "NotPetya" Mystery: Ransomware or Wiper?</h2>
-        
-        <div class="compare-container mt-8">
-          <div class="compare-box opacity-70">
-            <h3 class="line-through text-gray text-xl mb-4">Ransomware ("Petya")</h3>
-            <ul class="list-disc pl-5">
-              <li>Encrypts data for leverage</li>
-              <li>Demands $300 in Bitcoin</li>
-              <li>Returns data upon payment</li>
-            </ul>
+        <h2 class="section-title"><span class="number text-neon">III.</span> The Weapon: <span class="text-crimson" style="margin-left:0.5rem">Supply Chain Attack</span></h2>
+        <div class="supply-chain mt-8" id="supply-chain">
+          <div class="chain-node" data-chain="0">
+            <div class="chain-icon-box chain-blue">&#x1F1FA;&#x1F1F8;</div>
+            <div class="chain-label">NSA</div>
+            <div class="chain-sublabel">EternalBlue &amp;<br>EternalRomance</div>
           </div>
-          <div class="vs text-2xl font-bold">VS</div>
-          <div class="compare-box crimson-glow relative">
-            <div class="warning-badge absolute top-0 right-0 -mt-3 -mr-3">TRUE THREAT</div>
-            <h3 class="text-crimson text-2xl mb-4">A <span class="keyword">Wiper</span> ("NotPetya")</h3>
-            <ul class="list-disc pl-5">
-              <li>Weapon designed purely for destruction</li>
-              <li>Files could <strong>never</strong> be recovered</li>
-              <li>The ransom screen was just a disguise</li>
-            </ul>
+          <div class="chain-arrow-text text-crimson" data-chain="1">
+            <span>&#8594;</span><span class="chain-tag">STOLEN</span>
+          </div>
+          <div class="chain-node" data-chain="2">
+            <div class="chain-icon-box chain-gray">&#x1F464;</div>
+            <div class="chain-label">Shadow Brokers</div>
+            <div class="chain-sublabel">Leaked online<br>2016</div>
+          </div>
+          <div class="chain-arrow-text" data-chain="3">
+            <span>&#8594;</span>
+          </div>
+          <div class="chain-node" data-chain="4">
+            <div class="chain-icon-box chain-crimson-dark">&#x1F41B;</div>
+            <div class="chain-label">Sandworm / GRU</div>
+            <div class="chain-sublabel">+ Mimikatz<br>auto-spread</div>
+          </div>
+          <div class="chain-arrow-text text-neon" data-chain="5">
+            <span>&#8594;</span><span class="chain-tag">HIDDEN IN</span>
+          </div>
+          <div class="chain-node chain-danger" data-chain="6">
+            <div class="chain-icon-box chain-crimson">&#x1F4E6;</div>
+            <div class="chain-label">M.E.Doc Update</div>
+            <div class="chain-sublabel">Mandatory<br>tax software</div>
+          </div>
+          <div class="chain-arrow-text text-crimson" data-chain="7">
+            <span>&#8594;</span><span class="chain-tag">INFECTS</span>
+          </div>
+          <div class="chain-node chain-explosion" data-chain="8">
+            <div class="chain-icon-box chain-crimson">&#x1F4A5;</div>
+            <div class="chain-label">Every Company</div>
+            <div class="chain-sublabel">Ukraine &#8594; World<br>$10B+ damage</div>
           </div>
         </div>
-
-        <div class="vaccine-box mt-8 card card-border-green">
-          <h3 class="text-neon text-xl mb-2">💉 The "Vaccine" (Kill Switch)</h3>
-          <p>Researcher Amit Serper discovered a flaw: if a computer already had the read-only file <code class="bg-black px-2 py-1 rounded text-neon font-mono">perfc</code> in its Windows folder, the virus would "think" it was already infected and stop immediately.</p>
+        <div class="definition-pill mt-8">
+          <span class="keyword">Supply Chain Attack</span>
+          <span class="text-gray-300" style="margin-left:0.75rem">&mdash; infecting a trusted supplier to bypass all defenses</span>
+        </div>
+        <div class="medoc-card" id="medoc-wrap">
+          <div class="medoc-top">
+            <span style="font-size:1.5rem">&#x1F1FA;&#x1F1E6;</span>
+            <div class="medoc-info">
+              <span class="medoc-name">M.E.Doc</span>
+              <span class="medoc-sub">Electronic document management &mdash; mandatory for all Ukrainian businesses</span>
+            </div>
+            <span class="medoc-required">REQUIRED BY LAW</span>
+          </div>
+          <div class="medoc-update-bar">
+            <span class="term-green">&#x1F4E6;</span>
+            <span>Update v10.01.189 &mdash; signed, trusted...</span>
+            <span class="medoc-hidden text-crimson">[ BACKDOOR HIDDEN INSIDE ]</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Slide 5: Geopolitical Analysis -->
+    <!-- SLIDE 5: Ransomware or Wiper? -->
     <section class="slide" id="slide-5">
-      <div class="glass-panel h-full overflow-y-auto">
-        <h2 class="section-title"><span class="number text-neon">V.</span> Geopolitical Analysis: The "Why"</h2>
-        
-        <div class="timeline mt-8">
-          <div class="timeline-item">
-            <div class="timeline-badge bg-blue">📍</div>
-            <div class="timeline-content card">
-              <h4 class="text-xl font-bold text-blue-400">Strategic Destabilization</h4>
-              <p class="mt-2 text-gray-300">Launched the day before a Ukrainian national holiday to maximize symbolic impact, disrupting celebrations and causing systemic chaos across the country.</p>
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-badge bg-purple">🕵️</div>
-            <div class="timeline-content card">
-              <h4 class="text-xl font-bold text-purple-400">The Cover-Up Theory</h4>
-              <p class="mt-2 text-gray-300">Many researchers believe the massive destruction was actually a "smoke screen" designed to erase the digital footprints of earlier, deeper Russian espionage operations.</p>
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-badge bg-crimson">☢️</div>
-            <div class="timeline-content card border-red-500 border">
-              <h4 class="text-xl font-bold text-crimson">The Chernobyl Incident</h4>
-              <p class="mt-2 text-gray-300">The attack was so widespread and uncontrollable that it even disabled the radiation monitoring systems at the Chernobyl nuclear plant ruins, forcing staff to use manual counters.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Slide 6: Results and Global Consequences -->
-    <section class="slide" id="slide-6">
-      <div class="glass-panel h-full flex flex-col justify-center">
-        <h2 class="section-title"><span class="number text-neon">VI.</span> Results and Global Consequences</h2>
-        
-        <div class="stats-grid mt-8">
-          <div class="stat-box card">
-            <div class="stat-icon text-4xl mb-4">🌍</div>
-            <h3 class="text-xl font-bold mb-2">Uncontrolled Spillover</h3>
-            <p class="text-gray-300 text-sm">Because the internet has no borders, the virus infected any international company with an office communicating with Ukraine.</p>
-          </div>
-          <div class="stat-box card ring-2 ring-red-500 relative transform scale-105 shadow-red">
-            <div class="absolute top-0 right-0 bg-red-600 text-white text-xs px-2 py-1 font-bold">RECORD</div>
-            <div class="stat-value text-5xl font-mono font-bold text-crimson mb-2">$10B+</div>
-            <h3 class="text-xl font-bold mb-2">Estimated Damages</h3>
-            <p class="text-gray-300 text-sm">Maersk (shipping giant) had 17 port terminals paralyzed, breaking global supply chains instantly.</p>
-          </div>
-          <div class="stat-box card">
-            <div class="stat-icon text-4xl mb-4">⚖️</div>
-            <h3 class="text-xl font-bold mb-2">Lack of Accountability</h3>
-            <p class="text-gray-300 text-sm">Despite clear evidence pointing to the GRU, it took years to officially accuse Russia (the limit of <span class="keyword">Attribution</span>).</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Slide 7: Conclusion -->
-    <section class="slide" id="slide-7">
-      <div class="glass-panel text-center flex flex-col justify-center h-full relative overflow-hidden">
-        
-        <h2 class="section-title justify-center w-full"><span class="number text-neon">VII.</span> Conclusion</h2>
-        
-        <div class="conclusion-box mt-8 relative z-10">
-          <p class="text-2xl font-light text-gray-200">NotPetya demonstrated how a local political conflict can use stolen superpower technology to cause global economic chaos.</p>
-          
-          <div class="red-screen-effect mt-10 p-8 border border-red-500 bg-red-900 bg-opacity-20 rounded shadow-red relative overflow-hidden">
-            <div class="absolute inset-0 bg-glitch-pattern opacity-10 mix-blend-overlay"></div>
-            <h3 class="text-crimson font-bold text-3xl mb-4 tracking-wider uppercase">Answer to the Intro Question</h3>
-            <p class="text-2xl text-white font-mono leading-relaxed">
-              > "No country is invulnerable; our interconnectivity is our greatest weakness."
-            </p>
-          </div>
-          
-          <p class="mt-10 italic text-gray-400 text-xl font-mono">There is no "rollback" to the innocence of the pre-2017 digital world.</p>
-          <h3 class="mt-12 md:text-5xl text-3xl neon-text uppercase tracking-widest sys-msg">Thank you for your attention</h3>
-        </div>
-      </div>
-    </section>
-
-    <!-- Slide 8: Key Vocabulary -->
-    <section class="slide" id="slide-8">
       <div class="glass-panel">
-        <h2 class="section-title"><span class="number text-neon">VIII.</span> Key Vocabulary (<span class="keyword">Lexicon</span>)</h2>
-        <div class="vocab-grid mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="vocab-card card border-l-4 border-l-neon transition-transform hover:-translate-y-2">
-            <h4 class="text-xl font-bold text-neon mb-2 font-mono">> Supply Chain Attack</h4>
-            <p class="text-gray-300">Attacking a large group by infecting a trusted supplier (e.g., hiding malware in the M.E.Doc update).</p>
+        <h2 class="section-title"><span class="number text-neon">IV.</span> Ransomware... or <span class="text-crimson" style="margin-left:0.5rem">Wiper</span>?</h2>
+        <div class="wiper-layout mt-5">
+          <div>
+            <div class="notpetya-screen-wrap">
+              <img src="notpetya_screen.png" alt="NotPetya ransom screen" class="notpetya-screen">
+            </div>
+            <p class="screen-caption">Actual screen displayed on infected computers</p>
           </div>
-          <div class="vocab-card card border-l-4 border-l-crimson transition-transform hover:-translate-y-2">
-            <h4 class="text-xl font-bold text-crimson mb-2 font-mono">> Wiper</h4>
-            <p class="text-gray-300">A malware designed to permanently and irreversibly delete data rather than hold it for ransom.</p>
-          </div>
-          <div class="vocab-card card border-l-4 border-l-blue-500 transition-transform hover:-translate-y-2">
-            <h4 class="text-xl font-bold text-blue-400 mb-2 font-mono">> Attribution</h4>
-            <p class="text-gray-300">The complex and often debated process of identifying the specific actor (person or state) responsible for a cyberattack.</p>
-          </div>
-          <div class="vocab-card card border-l-4 border-l-purple-500 transition-transform hover:-translate-y-2">
-            <h4 class="text-xl font-bold text-purple-400 mb-2 font-mono">> Non-kinetic warfare</h4>
-            <p class="text-gray-300">Warfare that does not involve physical explosions or traditional weapons but can still cause immense physical and economic damage.</p>
-          </div>
-          <div class="vocab-card card border-l-4 border-l-yellow-500 md:col-span-2 transition-transform hover:-translate-y-2">
-            <h4 class="text-xl font-bold text-yellow-400 mb-2 font-mono">> Resilience</h4>
-            <p class="text-gray-300">The ability of a system, organization, or country to quickly recover from and adapt to a major digital disruption.</p>
+          <div class="wiper-right">
+            <div class="compare-row">
+              <div class="compare-half opacity-muted">
+                <h3 class="line-through text-gray" style="font-size:1rem">&#x1F4B0; "Ransomware"</h3>
+                <ul class="mini-list mt-2">
+                  <li>Encrypts files</li>
+                  <li>Demands $300</li>
+                  <li>Promises a key</li>
+                </ul>
+              </div>
+              <div class="compare-vs">VS</div>
+              <div class="compare-half compare-danger">
+                <h3 class="text-crimson" style="font-size:1rem">&#x1F5D1; True Wiper</h3>
+                <ul class="mini-list mt-2">
+                  <li>Destroys permanently</li>
+                  <li>Key was <strong>fake</strong></li>
+                  <li>No recovery possible</li>
+                </ul>
+              </div>
+            </div>
+            <div class="file-delete-demo mt-4">
+              <div style="font-size:0.7rem;color:var(--text-muted);margin-bottom:0.4rem;font-family:var(--mono-font)">// wiper behavior simulation:</div>
+              <div class="file-row" id="file-0"><span>&#x1F4C4;</span> annual_report_2017.xlsx</div>
+              <div class="file-row" id="file-1"><span>&#x1F4C4;</span> patient_records.db</div>
+              <div class="file-row" id="file-2"><span>&#x1F4C4;</span> backup_system.bak</div>
+              <div class="file-row" id="file-3"><span>&#x1F4C4;</span> master_boot_record</div>
+            </div>
+            <div class="vaccine-box mt-4">
+              <span class="text-neon">&#x1F489; Vaccine (Switch)</span>
+              <span class="text-gray-300" style="font-size:0.85rem;margin-left:0.5rem">&mdash; create <code style="font-family:var(--mono-font);color:var(--neon-green)">C:\Windows\perfc</code> (read-only) to stop the virus</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    
-    <div class="controls backdrop-blur-md bg-black bg-opacity-50 border border-gray-800 rounded-full px-6 py-3 flex items-center justify-between mx-auto mt-4 absolute bottom-6 left-1/2 transform -translate-x-1/2 w-[300px] z-50">
-      <button id="prev-btn" class="nav-btn group" title="Previous Slide (Left Arrow)">
-        <span class="text-neon group-hover:text-white transition-colors duration-200">◄</span>
+
+    <!-- SLIDE 6: Geopolitical Analysis - The Why -->
+    <section class="slide" id="slide-6">
+      <div class="glass-panel">
+        <h2 class="section-title"><span class="number text-neon">V.</span> The "Why" &mdash; Geopolitical Analysis</h2>
+        <div class="why-items mt-6">
+          <div class="why-item card">
+            <div class="why-icon text-blue-400">&#x1F4C5;</div>
+            <div class="why-content">
+              <h4 class="text-blue-400">Strategic Timing</h4>
+              <p>Launched the day before Ukraine's <strong>Constitution Day</strong> &mdash; maximum symbolic disruption</p>
+            </div>
+          </div>
+          <div class="why-item card">
+            <div class="why-icon text-purple-400">&#x1F575;&#xFE0F;</div>
+            <div class="why-content">
+              <h4 class="text-purple-400">The Cover-Up Theory</h4>
+              <p>Destruction as a <strong>smoke screen</strong> &mdash; erasing digital footprints of earlier GRU espionage</p>
+            </div>
+          </div>
+          <div class="why-item card" style="border-color:rgba(255,0,60,0.4)">
+            <div class="why-icon text-crimson">&#x2622;&#xFE0F;</div>
+            <div class="why-content">
+              <h4 class="text-crimson">Chernobyl &mdash; Unintended Consequence</h4>
+              <div class="why-chernobyl-row">
+                <p>Radiation monitoring at the nuclear ruins <strong>went dark</strong> &mdash; staff used manual Geiger counters</p>
+                <img src="chernobyl.jpg" alt="Chernobyl nuclear plant" class="why-image" onerror="this.style.display='none'">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 7: Global Consequences -->
+    <section class="slide" id="slide-7">
+      <div class="glass-panel">
+        <h2 class="section-title"><span class="number text-neon">VI.</span> Global Consequences</h2>
+        <div class="consequences-layout mt-4">
+          <div class="big-counter-row">
+            <div class="big-counter">
+              <span class="counter-prefix">$</span><span class="counter-value" id="damage-counter">0</span><span class="counter-suffix">B+</span>
+            </div>
+            <div class="counter-label">Total Global Damages (USD)</div>
+          </div>
+          <div class="consequence-cards">
+            <div class="consequence-card card">
+              <img src="maersk.JPG" alt="Maersk port terminals" class="consequence-image" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="consequence-placeholder" style="display:none"><span style="font-size:2.5rem">&#x26F4;</span></div>
+              <h4 class="mt-2">&#x2693; Maersk Shipping</h4>
+              <p>17 port terminals paralyzed &mdash; global supply chain broken for <strong>10 days</strong></p>
+            </div>
+            <div class="consequence-card card">
+              <div class="spread-visual">
+                <div class="spread-circle c1"></div>
+                <div class="spread-circle c2"></div>
+                <div class="spread-circle c3"></div>
+                <span class="spread-origin">&#x1F1FA;&#x1F1E6;</span>
+              </div>
+              <h4 class="mt-2">&#x1F30D; No Borders</h4>
+              <p>FedEx, Merck, Reckitt &mdash; any company with <strong>one Ukraine office</strong> was hit</p>
+            </div>
+            <div class="consequence-card card">
+              <div class="attribution-visual"><span style="font-size:3rem">&#x2696;&#xFE0F;</span></div>
+              <h4 class="mt-2">&#x2696;&#xFE0F; No Accountability</h4>
+              <p>GRU identified &mdash; yet <span class="keyword">attribution</span> took years with <strong>minimal</strong> consequences</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 8: Conclusion -->
+    <section class="slide" id="slide-8">
+      <div class="glass-panel text-center flex flex-col justify-center h-full relative overflow-hidden">
+        <div class="conclusion-bg">
+          <img src="notpetya_screen.png" alt="" aria-hidden="true" class="conclusion-bg-img">
+        </div>
+        <div style="position:relative;z-index:10">
+          <h2 class="section-title justify-center"><span class="number text-neon">VII.</span> Conclusion</h2>
+          <p class="conclusion-main mt-8">
+            A local conflict + stolen superpower tools = <span class="text-crimson">global economic chaos</span>
+          </p>
+          <div class="conclusion-quote mt-8">
+            <blockquote>
+              "No country is invulnerable;<br>our <span class="text-crimson">interconnectivity</span> is our greatest weakness."
+            </blockquote>
+          </div>
+          <p class="mt-8 italic text-gray-400 font-mono" style="font-size:0.95rem">
+            There is no "rollback" to the innocence of the pre-2017 digital world.
+          </p>
+          <h3 class="mt-10 neon-text uppercase tracking-widest sys-msg" style="font-size:2rem">Thank you for your attention</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 9: Key Vocabulary -->
+    <section class="slide" id="slide-9">
+      <div class="glass-panel">
+        <h2 class="section-title"><span class="number text-neon">VIII.</span> Key Vocabulary</h2>
+        <div class="vocab-grid mt-6">
+          <div class="vocab-card card" style="border-left:4px solid var(--neon-green)">
+            <h4 class="text-neon font-mono" style="font-size:1rem;margin-bottom:0.5rem">&gt; Supply Chain Attack</h4>
+            <p>Infecting a <strong>trusted supplier</strong> to reach every target (M.E.Doc &#8594; all Ukraine companies)</p>
+          </div>
+          <div class="vocab-card card" style="border-left:4px solid var(--crimson)">
+            <h4 class="text-crimson font-mono" style="font-size:1rem;margin-bottom:0.5rem">&gt; Wiper</h4>
+            <p>Malware designed to <strong>permanently destroy</strong> data &mdash; not to ransom it</p>
+          </div>
+          <div class="vocab-card card" style="border-left:4px solid var(--blue)">
+            <h4 class="text-blue-400 font-mono" style="font-size:1rem;margin-bottom:0.5rem">&gt; Attribution</h4>
+            <p>Identifying the <strong>responsible actor</strong> &mdash; technically hard, politically even harder</p>
+          </div>
+          <div class="vocab-card card" style="border-left:4px solid var(--purple)">
+            <h4 class="text-purple-400 font-mono" style="font-size:1rem;margin-bottom:0.5rem">&gt; Non-kinetic Warfare</h4>
+            <p>Causing <strong>real damage</strong> without physical weapons &mdash; but hospitals still go dark</p>
+          </div>
+          <div class="vocab-card card" style="border-left:4px solid #fbbf24;grid-column:span 2">
+            <h4 class="text-yellow-400 font-mono" style="font-size:1rem;margin-bottom:0.5rem">&gt; Resilience</h4>
+            <p>The ability to <strong>recover quickly</strong> from a major digital disruption</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="controls">
+      <button id="prev-btn" class="nav-btn" title="Previous Slide">
+        <span class="text-neon">&#9668;</span>
       </button>
-      <span class="slide-counter text-mono text-gray-300 font-mono tracking-widest">
-        <span id="current-slide-num" class="text-neon font-bold">1</span> / 8
+      <span class="slide-counter font-mono tracking-widest">
+        <span id="current-slide-num" class="text-neon font-bold">1</span> / 9
       </span>
-      <button id="next-btn" class="nav-btn group" title="Next Slide (Right Arrow, Space)">
-        <span class="text-neon group-hover:text-white transition-colors duration-200">►</span>
+      <button id="next-btn" class="nav-btn" title="Next Slide">
+        <span class="text-neon">&#9658;</span>
       </button>
     </div>
   </div>
