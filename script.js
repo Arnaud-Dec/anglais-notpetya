@@ -184,13 +184,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ── Init ──────────────────────────────────────────────
-  // Add slide number indicators
-  slides.forEach((slide, i) => {
-    const num = document.createElement('div');
-    num.className = 'slide-number';
-    num.textContent = `${i + 1} / ${total}`;
-    slide.appendChild(num);
-  });
-
   goTo(0);
 });
