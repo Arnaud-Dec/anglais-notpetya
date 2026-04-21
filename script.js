@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
       case 4: animGeoTimeline();    break;
       case 5: animSupplyChain();    break;
       case 6: animFileDeletion();   break;
-      case 8: animDamageCounter();  break;
+      case 7: animDamageCounter();  break;
     }
   }
 
