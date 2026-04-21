@@ -1184,3 +1184,57 @@ h1, h2, h3, h4, .font-mono {
   z-index: 20;
   pointer-events: none;
 }
+
+/* ─── Key stats row ─────────────────────────────────── */
+.key-stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.key-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.key-stat-value {
+  font-family: var(--mono-font);
+  font-size: 3.2rem;
+  font-weight: bold;
+  line-height: 1;
+  text-shadow: 0 0 15px currentColor;
+}
+.key-stat-label {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ─── Discussion slide ──────────────────────────────── */
+.discussion-question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.discussion-icon {
+  font-size: 4rem;
+}
+.discussion-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* ─── Navigation hint ───────────────────────────────── */
+.nav-hint {
+  animation: fadeHint 6s ease forwards;
+}
+@keyframes fadeHint {
+  0%, 70% { opacity: 0.5; }
+  100% { opacity: 0.2; }
+}
