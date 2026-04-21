@@ -55,11 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
     animDone.add(idx);
     switch (idx) {
       case 0: animTerminal();       break;
-      case 1: animAnecdote();       break;
-      case 2: animGeoTimeline();    break;
-      case 3: animSupplyChain();    break;
-      case 4: animFileDeletion();   break;
-      case 6: animDamageCounter();  break;
+      case 3: animAnecdote();       break;
+      case 4: animGeoTimeline();    break;
+      case 5: animSupplyChain();    break;
+      case 6: animFileDeletion();   break;
+      case 8: animDamageCounter();  break;
     }
   }
 
@@ -184,5 +184,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ── Init ──────────────────────────────────────────────
+  // Add slide number indicators
+  slides.forEach((slide, i) => {
+    const num = document.createElement('div');
+    num.className = 'slide-number';
+    num.textContent = `${i + 1} / ${total}`;
+    slide.appendChild(num);
+  });
+
   goTo(0);
 });

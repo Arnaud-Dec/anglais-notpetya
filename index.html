@@ -39,8 +39,75 @@
       </div>
     </section>
 
-    <!-- SLIDE 2: Opening Anecdote -->
+    <!-- SLIDE 2: Key Vocabulary (moved early so audience knows the terms) -->
     <section class="slide" id="slide-2">
+      <div class="glass-panel">
+        <h2 class="section-title"><span class="number text-neon">II.</span> Key Vocabulary</h2>
+        <p class="text-gray-300 mt-2" style="font-size:1.1rem;font-style:italic">Before we begin &mdash; a few terms you will hear throughout this presentation:</p>
+        <div class="vocab-grid mt-6">
+          <div class="vocab-card card" style="border-left:4px solid var(--neon-green)">
+            <h4 class="text-neon font-mono">&gt; Supply Chain Attack</h4>
+            <p>Infecting a <strong>trusted supplier</strong> to reach every target (M.E.Doc &#8594; all Ukraine companies)</p>
+          </div>
+          <div class="vocab-card card" style="border-left:4px solid var(--crimson)">
+            <h4 class="text-crimson font-mono">&gt; Wiper</h4>
+            <p>Malware designed to <strong>permanently destroy</strong> data &mdash; not to ransom it</p>
+          </div>
+          <div class="vocab-card card" style="border-left:4px solid var(--blue)">
+            <h4 class="text-blue-400 font-mono">&gt; Attribution</h4>
+            <p>Identifying the <strong>responsible actor</strong> &mdash; technically hard, politically even harder</p>
+          </div>
+          <div class="vocab-card card" style="border-left:4px solid var(--purple)">
+            <h4 class="text-purple-400 font-mono">&gt; Non-kinetic Warfare</h4>
+            <p>Causing <strong>real damage</strong> without physical weapons &mdash; but hospitals still go dark</p>
+          </div>
+          <div class="vocab-card card" style="border-left:4px solid #fbbf24;grid-column:span 2">
+            <h4 class="text-yellow-400 font-mono">&gt; Resilience</h4>
+            <p>The ability to <strong>recover quickly</strong> from a major digital disruption</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: Presentation Plan -->
+    <section class="slide" id="slide-3">
+      <div class="glass-panel">
+        <h2 class="section-title"><span class="number text-neon">III.</span> Outline</h2>
+        <div class="outline-list mt-6">
+          <div class="outline-item">
+            <span class="outline-num text-neon">01</span>
+            <span class="outline-label">Opening Anecdote &mdash; <em>The Night It Began</em></span>
+          </div>
+          <div class="outline-item">
+            <span class="outline-num text-blue-400">02</span>
+            <span class="outline-label">Geopolitical Context &mdash; <em>Ukraine as a Testing Ground</em></span>
+          </div>
+          <div class="outline-item">
+            <span class="outline-num text-purple-400">03</span>
+            <span class="outline-label">The Weapon &mdash; <em>Supply Chain Attack</em></span>
+          </div>
+          <div class="outline-item">
+            <span class="outline-num text-crimson">04</span>
+            <span class="outline-label">Ransomware or Wiper? &mdash; <em>The True Nature</em></span>
+          </div>
+          <div class="outline-item">
+            <span class="outline-num text-yellow-400">05</span>
+            <span class="outline-label">The "Why" &mdash; <em>Geopolitical Analysis</em></span>
+          </div>
+          <div class="outline-item">
+            <span class="outline-num text-crimson">06</span>
+            <span class="outline-label">Global Consequences &mdash; <em>$10 Billion in Damage</em></span>
+          </div>
+          <div class="outline-item">
+            <span class="outline-num text-neon">07</span>
+            <span class="outline-label">Conclusion</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: Opening Anecdote -->
+    <section class="slide" id="slide-4">
       <div class="glass-panel anecdote-panel">
         <div class="anec-stamp">&#x25FC; 2017-06-27 :: 03:47:22 EET &mdash; Kiev, Ukraine</div>
 
@@ -75,13 +142,13 @@
       </div>
     </section>
 
-    <!-- SLIDE 3: Geopolitical Context -->
-    <section class="slide" id="slide-3">
+    <!-- SLIDE 5: Geopolitical Context -->
+    <section class="slide" id="slide-5">
       <div class="glass-panel">
-        <h2 class="section-title"><span class="number text-neon">II.</span> Geopolitical Context</h2>
+        <h2 class="section-title"><span class="number text-neon">IV.</span> Geopolitical Context</h2>
         <div class="two-col-layout mt-6">
           <div>
-            <p class="text-gray-400 mb-5" style="font-size:0.85rem;font-style:italic">Ukraine: a digital testing ground for hybrid warfare</p>
+            <p class="text-gray-300 mb-5" style="font-size:1.1rem;font-style:italic">Ukraine: a digital testing ground for hybrid warfare</p>
             <div class="geo-timeline-track">
               <div class="geo-milestone" data-step="0">
                 <div class="milestone-dot dot-blue"></div>
@@ -111,8 +178,8 @@
           <div class="card card-border-crimson" style="overflow:hidden;padding:0">
             <img src="gru.jpg" alt="GRU Headquarters, Moscow" class="card-image" onerror="this.style.display='none'">
             <div style="padding:1.25rem">
-              <h3 class="text-crimson" style="font-size:1.15rem">&#x1F41B; Sandworm &mdash; GRU Unit 74455</h3>
-              <p class="text-gray-300 mt-2" style="font-size:0.88rem">Elite cyber-warfare unit of Russian Military Intelligence</p>
+              <h3 class="text-crimson" style="font-size:1.3rem">&#x1F41B; Sandworm &mdash; GRU Unit 74455</h3>
+              <p class="text-gray-300 mt-2" style="font-size:1.05rem">Elite cyber-warfare unit of Russian Military Intelligence</p>
               <div class="quote mt-3">"They left references to Frank Herbert's <em>Dune</em> in their code."</div>
             </div>
           </div>
@@ -120,10 +187,10 @@
       </div>
     </section>
 
-    <!-- SLIDE 4: The Weapon - Supply Chain Attack -->
-    <section class="slide" id="slide-4">
+    <!-- SLIDE 6: The Weapon - Supply Chain Attack -->
+    <section class="slide" id="slide-6">
       <div class="glass-panel">
-        <h2 class="section-title"><span class="number text-neon">III.</span> The Weapon: <span class="text-crimson" style="margin-left:0.5rem">Supply Chain Attack</span></h2>
+        <h2 class="section-title"><span class="number text-neon">V.</span> The Weapon: <span class="text-crimson" style="margin-left:0.5rem">Supply Chain Attack</span></h2>
         <div class="supply-chain mt-8" id="supply-chain">
           <div class="chain-node" data-chain="0">
             <div class="chain-icon-box chain-blue">&#x1F1FA;&#x1F1F8;</div>
@@ -185,10 +252,10 @@
       </div>
     </section>
 
-    <!-- SLIDE 5: Ransomware or Wiper? -->
-    <section class="slide" id="slide-5">
+    <!-- SLIDE 7: Ransomware or Wiper? -->
+    <section class="slide" id="slide-7">
       <div class="glass-panel">
-        <h2 class="section-title"><span class="number text-neon">IV.</span> Ransomware... or <span class="text-crimson" style="margin-left:0.5rem">Wiper</span>?</h2>
+        <h2 class="section-title"><span class="number text-neon">VI.</span> Ransomware... or <span class="text-crimson" style="margin-left:0.5rem">Wiper</span>?</h2>
         <div class="wiper-layout mt-5">
           <div>
             <div class="notpetya-screen-wrap">
@@ -199,7 +266,7 @@
           <div class="wiper-right">
             <div class="compare-row">
               <div class="compare-half opacity-muted">
-                <h3 class="line-through text-gray" style="font-size:1rem">&#x1F4B0; "Ransomware"</h3>
+                <h3 class="line-through text-gray" style="font-size:1.15rem">&#x1F4B0; "Ransomware"</h3>
                 <ul class="mini-list mt-2">
                   <li>Encrypts files</li>
                   <li>Demands $300</li>
@@ -208,7 +275,7 @@
               </div>
               <div class="compare-vs">VS</div>
               <div class="compare-half compare-danger">
-                <h3 class="text-crimson" style="font-size:1rem">&#x1F5D1; True Wiper</h3>
+                <h3 class="text-crimson" style="font-size:1.15rem">&#x1F5D1; True Wiper</h3>
                 <ul class="mini-list mt-2">
                   <li>Destroys permanently</li>
                   <li>Key was <strong>fake</strong></li>
@@ -217,7 +284,7 @@
               </div>
             </div>
             <div class="file-delete-demo mt-4">
-              <div style="font-size:0.7rem;color:var(--text-muted);margin-bottom:0.4rem;font-family:var(--mono-font)">// wiper behavior simulation:</div>
+              <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.4rem;font-family:var(--mono-font)">// wiper behavior simulation:</div>
               <div class="file-row" id="file-0"><span>&#x1F4C4;</span> annual_report_2017.xlsx</div>
               <div class="file-row" id="file-1"><span>&#x1F4C4;</span> patient_records.db</div>
               <div class="file-row" id="file-2"><span>&#x1F4C4;</span> backup_system.bak</div>
@@ -225,17 +292,17 @@
             </div>
             <div class="vaccine-box mt-4">
               <span class="text-neon">&#x1F489; Vaccine (Switch)</span>
-              <span class="text-gray-300" style="font-size:0.85rem;margin-left:0.5rem">&mdash; create <code style="font-family:var(--mono-font);color:var(--neon-green)">C:\Windows\perfc</code> (read-only) to stop the virus</span>
+              <span class="text-gray-300" style="margin-left:0.5rem">&mdash; create <code style="font-family:var(--mono-font);color:var(--neon-green)">C:\Windows\perfc</code> (read-only) to stop the virus</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 6: Geopolitical Analysis - The Why -->
-    <section class="slide" id="slide-6">
+    <!-- SLIDE 8: Geopolitical Analysis - The Why -->
+    <section class="slide" id="slide-8">
       <div class="glass-panel">
-        <h2 class="section-title"><span class="number text-neon">V.</span> The "Why" &mdash; Geopolitical Analysis</h2>
+        <h2 class="section-title"><span class="number text-neon">VII.</span> The "Why" &mdash; Geopolitical Analysis</h2>
         <div class="why-items mt-6">
           <div class="why-item card">
             <div class="why-icon text-blue-400">&#x1F4C5;</div>
@@ -265,10 +332,10 @@
       </div>
     </section>
 
-    <!-- SLIDE 7: Global Consequences -->
-    <section class="slide" id="slide-7">
+    <!-- SLIDE 9: Global Consequences -->
+    <section class="slide" id="slide-9">
       <div class="glass-panel">
-        <h2 class="section-title"><span class="number text-neon">VI.</span> Global Consequences</h2>
+        <h2 class="section-title"><span class="number text-neon">VIII.</span> Global Consequences</h2>
         <div class="consequences-layout mt-4">
           <div class="big-counter-row">
             <div class="big-counter">
@@ -303,14 +370,14 @@
       </div>
     </section>
 
-    <!-- SLIDE 8: Conclusion -->
-    <section class="slide" id="slide-8">
+    <!-- SLIDE 10: Conclusion -->
+    <section class="slide" id="slide-10">
       <div class="glass-panel text-center flex flex-col justify-center h-full relative overflow-hidden">
         <div class="conclusion-bg">
           <img src="notpetya_screen.png" alt="" aria-hidden="true" class="conclusion-bg-img">
         </div>
         <div style="position:relative;z-index:10">
-          <h2 class="section-title justify-center"><span class="number text-neon">VII.</span> Conclusion</h2>
+          <h2 class="section-title justify-center"><span class="number text-neon">IX.</span> Conclusion</h2>
           <p class="conclusion-main mt-8">
             A local conflict + stolen superpower tools = <span class="text-crimson">global economic chaos</span>
           </p>
@@ -319,39 +386,10 @@
               "No country is invulnerable;<br>our <span class="text-crimson">interconnectivity</span> is our greatest weakness."
             </blockquote>
           </div>
-          <p class="mt-8 italic text-gray-400 font-mono" style="font-size:0.95rem">
+          <p class="mt-8 italic text-gray-300 font-mono" style="font-size:1.1rem">
             There is no "rollback" to the innocence of the pre-2017 digital world.
           </p>
-          <h3 class="mt-10 neon-text uppercase tracking-widest sys-msg" style="font-size:2rem">Thank you for your attention</h3>
-        </div>
-      </div>
-    </section>
-
-    <!-- SLIDE 9: Key Vocabulary -->
-    <section class="slide" id="slide-9">
-      <div class="glass-panel">
-        <h2 class="section-title"><span class="number text-neon">VIII.</span> Key Vocabulary</h2>
-        <div class="vocab-grid mt-6">
-          <div class="vocab-card card" style="border-left:4px solid var(--neon-green)">
-            <h4 class="text-neon font-mono" style="font-size:1rem;margin-bottom:0.5rem">&gt; Supply Chain Attack</h4>
-            <p>Infecting a <strong>trusted supplier</strong> to reach every target (M.E.Doc &#8594; all Ukraine companies)</p>
-          </div>
-          <div class="vocab-card card" style="border-left:4px solid var(--crimson)">
-            <h4 class="text-crimson font-mono" style="font-size:1rem;margin-bottom:0.5rem">&gt; Wiper</h4>
-            <p>Malware designed to <strong>permanently destroy</strong> data &mdash; not to ransom it</p>
-          </div>
-          <div class="vocab-card card" style="border-left:4px solid var(--blue)">
-            <h4 class="text-blue-400 font-mono" style="font-size:1rem;margin-bottom:0.5rem">&gt; Attribution</h4>
-            <p>Identifying the <strong>responsible actor</strong> &mdash; technically hard, politically even harder</p>
-          </div>
-          <div class="vocab-card card" style="border-left:4px solid var(--purple)">
-            <h4 class="text-purple-400 font-mono" style="font-size:1rem;margin-bottom:0.5rem">&gt; Non-kinetic Warfare</h4>
-            <p>Causing <strong>real damage</strong> without physical weapons &mdash; but hospitals still go dark</p>
-          </div>
-          <div class="vocab-card card" style="border-left:4px solid #fbbf24;grid-column:span 2">
-            <h4 class="text-yellow-400 font-mono" style="font-size:1rem;margin-bottom:0.5rem">&gt; Resilience</h4>
-            <p>The ability to <strong>recover quickly</strong> from a major digital disruption</p>
-          </div>
+          <h3 class="mt-10 neon-text uppercase tracking-widest sys-msg" style="font-size:2.2rem">Thank you for your attention</h3>
         </div>
       </div>
     </section>
@@ -361,7 +399,7 @@
         <span class="text-neon">&#9668;</span>
       </button>
       <span class="slide-counter font-mono tracking-widest">
-        <span id="current-slide-num" class="text-neon font-bold">1</span> / 9
+        <span id="current-slide-num" class="text-neon font-bold">1</span> / 10
       </span>
       <button id="next-btn" class="nav-btn" title="Next Slide">
         <span class="text-neon">&#9658;</span>

@@ -5,7 +5,7 @@
   --panel-bg: rgba(15, 15, 20, 0.7);
   --panel-border: rgba(40, 40, 50, 0.5);
   --text-main: #f0f0f0;
-  --text-muted: #8892b0;
+  --text-muted: #b0b8d0;
   --mono-font: 'Share Tech Mono', monospace;
   --sans-font: 'Inter', sans-serif;
   --blue: #00b8ff;
@@ -152,8 +152,8 @@ h1, h2, h3, h4, .font-mono {
 .text-white { color: white; }
 .text-gray { color: var(--text-muted); }
 .text-gray-200 { color: #e5e7eb; }
-.text-gray-300 { color: #d1d5db; }
-.text-gray-400 { color: #9ca3af; }
+.text-gray-300 { color: #e0e3e8; }
+.text-gray-400 { color: #c0c5d0; }
 .text-blue-400 { color: var(--blue); }
 .text-purple-400 { color: var(--purple); }
 .text-yellow-400 { color: #fbbf24; }
@@ -219,7 +219,7 @@ h1, h2, h3, h4, .font-mono {
   display: inline-block;
   color: var(--crimson);
   font-family: var(--mono-font);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   letter-spacing: 2px;
   margin-bottom: 1rem;
@@ -272,7 +272,7 @@ h1, h2, h3, h4, .font-mono {
 }
 
 .subtitle {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: var(--text-muted);
   font-family: var(--sans-font);
   font-weight: 400;
@@ -317,9 +317,9 @@ h1, h2, h3, h4, .font-mono {
 .terminal-body {
   padding: 1.5rem;
   font-family: var(--mono-font);
-  font-size: 1.1rem;
-  color: #a9b7c6;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  color: #c5cfe0;
+  line-height: 1.7;
 }
 
 .cursor {
@@ -397,6 +397,7 @@ h1, h2, h3, h4, .font-mono {
   padding-left: 1rem;
   font-style: italic;
   color: var(--text-muted);
+  font-size: 1.05rem;
 }
 
 /* Feature lists */
@@ -547,7 +548,7 @@ h1, h2, h3, h4, .font-mono {
 .terminal-line {
   opacity: 0;
   font-family: var(--mono-font);
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: #a9b7c6;
   line-height: 1.7;
   transition: opacity 0.35s ease;
@@ -619,13 +620,13 @@ h1, h2, h3, h4, .font-mono {
 
 .milestone-year {
   font-family: var(--mono-font);
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: bold;
   color: #fff;
   margin-bottom: 4px;
 }
 .milestone-text {
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
   line-height: 1.4;
 }
@@ -673,8 +674,8 @@ h1, h2, h3, h4, .font-mono {
 .chain-crimson-dark{ background: rgba(255,0,60,0.1);    border-color: rgba(255,0,60,0.4); }
 .chain-crimson     { background: rgba(255,0,60,0.25);   border-color: var(--crimson); }
 
-.chain-label    { font-family: var(--mono-font); font-size: 0.75rem; font-weight: bold; color: #fff; margin-bottom: 3px; }
-.chain-sublabel { font-size: 0.65rem; color: var(--text-muted); line-height: 1.3; }
+.chain-label    { font-family: var(--mono-font); font-size: 0.95rem; font-weight: bold; color: #fff; margin-bottom: 3px; }
+.chain-sublabel { font-size: 0.82rem; color: var(--text-muted); line-height: 1.3; }
 
 .chain-danger .chain-icon-box {
   animation: dangerPulse 1.2s ease-in-out infinite alternate;
@@ -697,7 +698,7 @@ h1, h2, h3, h4, .font-mono {
 }
 .chain-arrow-text.visible { opacity: 1; }
 .chain-tag {
-  font-size: 0.55rem;
+  font-size: 0.72rem;
   letter-spacing: 1px;
   font-family: var(--mono-font);
   margin-top: 2px;
@@ -707,9 +708,9 @@ h1, h2, h3, h4, .font-mono {
   background: rgba(0,255,65,0.05);
   border: 1px solid rgba(0,255,65,0.2);
   border-radius: 50px;
-  padding: 0.7rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
 }
 
 /* ─── SLIDE 4 — Wiper ───────────────────────────────── */
@@ -726,7 +727,7 @@ h1, h2, h3, h4, .font-mono {
   box-shadow: 0 0 20px rgba(255,0,60,0.3);
 }
 .notpetya-screen { width: 100%; display: block; }
-.screen-caption  { text-align:center; font-size:0.7rem; color:var(--text-muted); margin-top:0.5rem; font-style:italic; }
+.screen-caption  { text-align:center; font-size:0.9rem; color:var(--text-muted); margin-top:0.5rem; font-style:italic; }
 
 .wiper-right {}
 
@@ -756,7 +757,7 @@ h1, h2, h3, h4, .font-mono {
   font-size: 1.1rem;
 }
 .mini-list { list-style: none; padding: 0; }
-.mini-list li { font-size: 0.85rem; color: var(--text-muted); padding: 0.15rem 0; }
+.mini-list li { font-size: 1.05rem; color: var(--text-muted); padding: 0.2rem 0; }
 .mini-list li::before { content: '> '; color: var(--neon-green); font-family: var(--mono-font); }
 
 .file-delete-demo {
@@ -767,7 +768,7 @@ h1, h2, h3, h4, .font-mono {
 }
 .file-row {
   font-family: var(--mono-font);
-  font-size: 0.82rem;
+  font-size: 1rem;
   padding: 0.22rem 0.3rem;
   color: #a9b7c6;
   display: flex;
@@ -782,8 +783,8 @@ h1, h2, h3, h4, .font-mono {
   background: rgba(0,255,65,0.05);
   border: 1px solid rgba(0,255,65,0.25);
   border-radius: 8px;
-  padding: 0.75rem 1rem;
-  font-size: 0.88rem;
+  padding: 0.85rem 1.1rem;
+  font-size: 1.05rem;
 }
 
 /* ─── SLIDE 5 — Why ─────────────────────────────────── */
@@ -798,10 +799,10 @@ h1, h2, h3, h4, .font-mono {
 .why-icon    { font-size: 2rem; flex-shrink: 0; }
 .why-content h4 {
   font-family: var(--mono-font);
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   margin-bottom: 0.3rem;
 }
-.why-content p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.55; }
+.why-content p { font-size: 1.05rem; color: var(--text-muted); line-height: 1.55; }
 .why-chernobyl-row {
   display: flex;
   align-items: center;
@@ -841,7 +842,7 @@ h1, h2, h3, h4, .font-mono {
   line-height: 1;
 }
 .counter-label {
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: var(--text-muted);
   margin-top: 0.25rem;
   letter-spacing: 1px;
@@ -854,8 +855,8 @@ h1, h2, h3, h4, .font-mono {
   gap: 1rem;
 }
 .consequence-card { padding: 1rem; text-align: center; }
-.consequence-card h4 { font-family: var(--mono-font); font-size: 0.95rem; color: #fff; }
-.consequence-card p  { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; margin-top: 0.4rem; }
+.consequence-card h4 { font-family: var(--mono-font); font-size: 1.1rem; color: #fff; }
+.consequence-card p  { font-size: 1rem; color: var(--text-muted); line-height: 1.5; margin-top: 0.4rem; }
 
 .consequence-image {
   width: 100%;
@@ -913,7 +914,7 @@ h1, h2, h3, h4, .font-mono {
   filter: blur(3px);
 }
 .conclusion-main {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   font-weight: 300;
   color: #e5e7eb;
   line-height: 1.5;
@@ -940,7 +941,8 @@ h1, h2, h3, h4, .font-mono {
 }
 .vocab-card { padding: 1rem 1.25rem; transition: transform 0.3s ease; }
 .vocab-card:hover { transform: translateY(-3px); }
-.vocab-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+.vocab-card p { font-size: 1.05rem; color: var(--text-muted); line-height: 1.5; }
+.vocab-card h4 { font-size: 1.15rem; margin-bottom: 0.5rem; }
 
 /* ─── Controls ──────────────────────────────────────── */
 .controls {
@@ -968,7 +970,7 @@ h1, h2, h3, h4, .font-mono {
 .anec-stamp {
   font-family: var(--mono-font);
   color: var(--text-muted);
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   letter-spacing: 1.5px;
   margin-bottom: 2rem;
   padding: 0.4rem 1rem;
@@ -987,7 +989,7 @@ h1, h2, h3, h4, .font-mono {
 .anec-row.visible { opacity: 1; transform: translateY(0); }
 
 .anec-scene-icon { font-size: 1.8rem; margin-right: 0.75rem; vertical-align: middle; }
-.anec-scene-text { font-size: 1.4rem; font-style: italic; vertical-align: middle; }
+.anec-scene-text { font-size: 1.6rem; font-style: italic; vertical-align: middle; }
 
 .anec-file-box {
   background: rgba(0,0,0,0.55);
@@ -1015,7 +1017,7 @@ h1, h2, h3, h4, .font-mono {
 
 .anec-file-tag {
   margin-left: auto;
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
   letter-spacing: 2px;
 }
@@ -1029,7 +1031,7 @@ h1, h2, h3, h4, .font-mono {
 .anec-counter-label {
   font-family: var(--mono-font);
   color: var(--text-muted);
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 .anec-infection-counter {
   font-family: var(--mono-font);
@@ -1061,7 +1063,7 @@ h1, h2, h3, h4, .font-mono {
   opacity: 0;
   text-align: center;
   font-family: var(--mono-font);
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: var(--text-muted);
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -1079,8 +1081,8 @@ h1, h2, h3, h4, .font-mono {
   background: rgba(255,0,60,0.06);
   border: 1px solid rgba(255,0,60,0.2);
   border-radius: 8px;
-  padding: 0.7rem 0.85rem;
-  font-size: 0.9rem;
+  padding: 0.8rem 1rem;
+  font-size: 1.05rem;
   text-align: center;
   opacity: 0;
   transform: scale(0.88);
@@ -1109,11 +1111,11 @@ h1, h2, h3, h4, .font-mono {
   border-bottom: 1px solid rgba(255,255,255,0.07);
 }
 .medoc-info { display: flex; flex-direction: column; gap: 0.1rem; flex: 1; }
-.medoc-name { font-family: var(--mono-font); font-size: 0.95rem; color: #fff; font-weight: bold; }
-.medoc-sub  { font-size: 0.68rem; color: var(--text-muted); }
+.medoc-name { font-family: var(--mono-font); font-size: 1.1rem; color: #fff; font-weight: bold; }
+.medoc-sub  { font-size: 0.85rem; color: var(--text-muted); }
 .medoc-required {
   font-family: var(--mono-font);
-  font-size: 0.6rem;
+  font-size: 0.78rem;
   letter-spacing: 1px;
   color: #fbbf24;
   border: 1px solid #fbbf24;
@@ -1127,12 +1129,58 @@ h1, h2, h3, h4, .font-mono {
   gap: 0.7rem;
   padding: 0.5rem 1.1rem;
   font-family: var(--mono-font);
-  font-size: 0.76rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
 }
 .medoc-hidden {
   margin-left: auto;
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   letter-spacing: 1px;
   animation: blink 2s infinite;
+}
+
+/* ─── Outline slide ─────────────────────────────────── */
+.outline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.outline-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1rem 1.5rem;
+  background: rgba(255,255,255,0.03);
+  border-radius: 8px;
+  border-left: 3px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+.outline-item:hover {
+  background: rgba(255,255,255,0.06);
+  border-left-color: var(--neon-green);
+}
+.outline-num {
+  font-family: var(--mono-font);
+  font-size: 1.6rem;
+  font-weight: bold;
+  min-width: 2.5rem;
+}
+.outline-label {
+  font-size: 1.25rem;
+  color: #e0e3e8;
+}
+.outline-label em {
+  color: var(--text-muted);
+}
+
+/* ─── Slide number indicator ────────────────────────── */
+.slide-number {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  font-family: var(--mono-font);
+  font-size: 1rem;
+  color: rgba(255,255,255,0.25);
+  z-index: 20;
+  pointer-events: none;
 }
